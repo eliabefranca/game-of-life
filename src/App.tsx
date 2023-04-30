@@ -82,11 +82,6 @@ function App() {
         setRenders(renders + 1);
     };
 
-    const clear = () => {
-        game.clear();
-        setRenders(renders + 1);
-    };
-
     const changeSpeed = (newSpeed: number) => {
         if (newSpeed < 10) {
             newSpeed = 10;
