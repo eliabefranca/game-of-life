@@ -7,7 +7,7 @@ const LINES = 100;
 const COLUMNS = 100;
 const CELL_SIZE = 3;
 const DEBUG = false;
-const TIME_BETWEEN_RENDERS = 1;
+const TIME_BETWEEN_RENDERS = 100;
 
 const game = new Game({
     lines: LINES,
@@ -122,11 +122,17 @@ function App() {
                 </button>
                 {stopped && <button onClick={reset}>reset</button>}
                 {stopped && <button onClick={clear}>clear</button>}
-                <div>
-                    <button onClick={() => changeSpeed(speed - 10)}>-</button>{" "}
-                    delay between frames: {speed}{" "}
-                    <button onClick={() => changeSpeed(speed + 10)}>+</button>
-                </div>
+                {stopped && (
+                    <div>
+                        <button onClick={() => changeSpeed(speed - 10)}>
+                            -
+                        </button>{" "}
+                        delay between frames: {speed}{" "}
+                        <button onClick={() => changeSpeed(speed + 10)}>
+                            +
+                        </button>
+                    </div>
+                )}
             </div>
 
             <div style={styles.grid}>
