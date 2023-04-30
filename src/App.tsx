@@ -127,14 +127,13 @@ function App() {
                         <button onClick={() => changeSpeed(speed - 10)}>
                             -
                         </button>{" "}
-                        delay between frames: {speed}{" "}
+                        <span>delay between frames: {speed} </span>
                         <button onClick={() => changeSpeed(speed + 10)}>
                             +
                         </button>
                     </div>
                 )}
             </div>
-
             <div style={styles.grid}>
                 {game.grid.map((line) =>
                     line.map((cell) => (
