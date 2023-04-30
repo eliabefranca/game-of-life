@@ -134,6 +134,27 @@ function App() {
                     ))
                 )}
             </div>
+            <p>
+                The Game of Life is a cellular automation and zero-player game
+                developed by British mathematician John Conway in 1970. It is
+                played on an infinite two-dimensional grid of cells, which can
+                be in one of two states: alive or dead. The rules of the Game of
+                Life are very simple: Any live cell with fewer than two live
+                neighbours dies, as if by underpopulation. Any live cell with
+                two or three live neighbours lives on to the next generation.
+                Any live cell with more than three live neighbours dies, as if
+                by overpopulation. Any dead cell with exactly three live
+                neighbours becomes a live cell, as if by reproduction. These
+                rules determine whether a given cell on the grid will be alive
+                or dead in the next generation. The initial pattern constitutes
+                the seed of the system. The game is so named because the
+                patterns that emerge on the grid over time can resemble the
+                growth and death of living organisms. The Game of Life has been
+                widely studied and has found applications in various fields such
+                as computer science, physics, and biology. Its simplicity and
+                richness make it a popular subject of study for exploring
+                complex systems and emergent behavior.
+            </p>
         </div>
     );
 }
