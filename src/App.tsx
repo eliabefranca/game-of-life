@@ -139,16 +139,29 @@ function App() {
                 developed by British mathematician John Conway in 1970. It is
                 played on an infinite two-dimensional grid of cells, which can
                 be in one of two states: alive or dead. The rules of the Game of
-                Life are very simple: Any live cell with fewer than two live
-                neighbours dies, as if by underpopulation. Any live cell with
-                two or three live neighbours lives on to the next generation.
-                Any live cell with more than three live neighbours dies, as if
-                by overpopulation. Any dead cell with exactly three live
-                neighbours becomes a live cell, as if by reproduction. These
-                rules determine whether a given cell on the grid will be alive
-                or dead in the next generation. The initial pattern constitutes
-                the seed of the system. The game is so named because the
-                patterns that emerge on the grid over time can resemble the
+                Life are very simple:
+                <ul>
+                    <li>
+                        Any live cell with fewer than two live neighbours dies,
+                        as if by underpopulation.
+                    </li>
+                    <li>
+                        Any live cell with two or three live neighbours lives on
+                        to the next generation.
+                    </li>
+                    <li>
+                        Any live cell with more than three live neighbours dies,
+                        as if by overpopulation.
+                    </li>
+                    <li>
+                        Any dead cell with exactly three live neighbours becomes
+                        a live cell, as if by reproduction.
+                    </li>
+                </ul>
+                These rules determine whether a given cell on the grid will be
+                alive or dead in the next generation. The initial pattern
+                constitutes the seed of the system. The game is so named because
+                the patterns that emerge on the grid over time can resemble the
                 growth and death of living organisms. The Game of Life has been
                 widely studied and has found applications in various fields such
                 as computer science, physics, and biology. Its simplicity and
