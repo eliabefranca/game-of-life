@@ -53,6 +53,7 @@ const styles: { [key: string]: CSSProperties } = {
 };
 
 function App() {
+    const [speed, setSpeed] = useState(TIME_BETWEEN_RENDERS);
     const [stopped, setStopped] = useState(true);
     const [renders, setRenders] = useState(1);
 
@@ -86,6 +87,14 @@ function App() {
         setRenders(renders + 1);
     };
 
+    const changeSpeed = (newSpeed: number) => {
+        if (newSpeed < 10) {
+            newSpeed = 10;
+        }
+        setSpeed(newSpeed);
+        game.config.speed = newSpeed;
+    };
+
     useEffect(() => {
         if (stopped) {
             return;
@@ -113,6 +122,11 @@ function App() {
                 </button>
                 {stopped && <button onClick={reset}>reset</button>}
                 {stopped && <button onClick={clear}>clear</button>}
+                <div>
+                    <button onClick={() => changeSpeed(speed - 10)}>-</button>{" "}
+                    delay between frames: {speed}{" "}
+                    <button onClick={() => changeSpeed(speed + 10)}>+</button>
+                </div>
             </div>
 
             <div style={styles.grid}>
