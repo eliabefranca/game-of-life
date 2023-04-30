@@ -22,6 +22,9 @@ const styles: { [key: string]: CSSProperties } = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        minWidth: "100vw",
+        minHeight: "100vh",
+        backgroundColor: "#fff",
     },
     grid: {
         display: "flex",
