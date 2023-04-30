@@ -121,7 +121,6 @@ function App() {
                     {stopped ? "start" : "stop"}
                 </button>
                 {stopped && <button onClick={reset}>reset</button>}
-                {stopped && <button onClick={clear}>clear</button>}
                 {stopped && (
                     <div>
                         <button onClick={() => changeSpeed(speed - 10)}>
