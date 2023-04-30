@@ -5,7 +5,7 @@ import { CSSProperties, useEffect, useState } from "react";
 // be careful with the options, it might freeze your chrome :P
 const LINES = 100;
 const COLUMNS = 100;
-const CELL_SIZE = 5;
+const CELL_SIZE = 3;
 const DEBUG = false;
 const TIME_BETWEEN_RENDERS = 1;
 
@@ -18,14 +18,6 @@ const game = new Game({
 game.randomlyPopulateGrid();
 
 const styles: { [key: string]: CSSProperties } = {
-    container: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        minWidth: "100vw",
-        minHeight: "100vh",
-        backgroundColor: "#fff",
-    },
     grid: {
         display: "flex",
         flexWrap: "wrap",
@@ -57,19 +49,6 @@ const styles: { [key: string]: CSSProperties } = {
         fontWeight: "bold",
         backgroundColor: "#000",
         color: "#fff",
-    },
-
-    controls: {
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "1rem",
-        marginBottom: "1rem",
-    },
-
-    title: {
-        display: "block",
-        width: "100%",
     },
 };
 
@@ -122,9 +101,9 @@ function App() {
     }, [stopped, renders]);
 
     return (
-        <div style={styles.container}>
-            <div style={styles.controls}>
-                <div style={styles.title}>
+        <div className="container">
+            <div className="controls">
+                <div className="title">
                     <h1>Game Of Life</h1>
 
                     {DEBUG && <> - renders: {renders}</>}
